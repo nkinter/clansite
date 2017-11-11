@@ -1,0 +1,143 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    table
+        thead
+            tr
+                th Membership ID
+                th Display Name
+                th First Name
+                th Last Name
+                th Latest Update
+                th Activities Entered
+                th Activities Won
+                th Assists
+                th Total Death Distance
+                th Average Death Distance
+                th Total Kill Distance
+                th Kills
+                th Average Kill Distance
+                th Seconds Played
+                th Deaths
+                th Average Lifespan
+                th Score
+                th Average Score Per Kill
+                th Average Score Per Life
+                th Best Single Game Kills
+                th Best Single Game Score
+                th Opponents Defeated
+                th Efficiency
+                th Kills Deaths Ratio
+                th Kills Deaths Assists
+                th Objectives Completed
+                th Precision Kills
+                th Resurrections Performed
+                th Resurrections Received
+                th Suicides
+                th Weapon Kills Auto Rifle
+                th Weapon Kills Fusion Rifle
+                th Weapon Kills Hand Cannon
+                th Weapon Kills Machinegun
+                th Weapon Kills Pulse Rifle
+                th Weapon Kills Rocket Launcher
+                th Weapon Kills Scout Rifle
+                th Weapon Kills Shotgun
+                th Weapon Kills Sniper
+                th Weapon Kills Submachinegun
+                th Weapon Kills Relic
+                th Weapon Kills Side Arm
+                th Weapon Kills Sword
+                th Weapon Kills Ability
+                th Weapon Kills Grenade
+                th Weapon Kills Grenade Launcher
+                th Weapon Kills Super
+                th Weapon Kills Melee
+                th Weapon Best Type
+                th Win Loss Ratio
+                th All Participants Count
+                th All Participants Score
+                th All Participants Time Played
+                th Longest Kill Spree
+                th Longest Single Life
+                th Most Precision Kills
+                th Orbs Dropped
+                th Orbs Gathered
+                th Remaining Time After Quit Seconds
+                th Team Score
+                th Total Activity Duration Seconds
+                th Combat Rating
+                th Fastest Completion Ms
+                th Longest Kill Distance
+                th Highest Character Level
+                th Highest Light Level
+        tbody
+            - each item in rows
+                tr
+                    td= item.membershipId
+                    td= item.displayName
+                    td= item.firstName
+                    td= item.lastName
+                    td= item.latestUpdate
+                    td= item.activitesEntered
+                    td= item.activitesWon
+                    td= item.assists
+                    td= item.totalDeathDistance
+                    td= item.averageDeathDistance
+                    td= item.totalKillDistance
+                    td= item.kills
+                    td= item.averageKillDistance
+                    td= item.secondsPlayed
+                    td= item.deaths
+                    td= item.averageLifespan
+                    td= item.score
+                    td= item.averageScorePerKill
+                    td= item.averageScorePerLife
+                    td= item.bestSingleGameKills
+                    td= item.bestSingleGameScore
+                    td= item.opponentsDefeated
+                    td= item.efficiency
+                    td= item.killsDeathsRatio
+                    td= item.killsDeathsAssists
+                    td= item.objectivesCompleted
+                    td= item.precisionKills
+                    td= item.resurectionsPerformed
+                    td= item.resurrectionsReceived
+                    td= item.suicides
+                    td= item.weaponKillsAutoRifle
+                    td= item.weaponKillsFusionRifle
+                    td= item.weaponKillsHandCannon
+                    td= item.weaponKillsMachinegun
+                    td= item.weaponKillsPulseRifle
+                    td= item.weaponKillsRocketLauncher
+                    td= item.weaponKillsScoutRifle
+                    td= item.weaponKillsShotgun
+                    td= item.weaponKillsSniper
+                    td= item.weaponKillsSubmachinegun
+                    td= item.weaponKillsRelic
+                    td= item.weaponKillsSideArm
+                    td= item.weaponKillsSword
+                    td= item.weaponKillsAbility
+                    td= item.weaponKillsGrenade
+                    td= item.weaponKillsGrenadeLauncher
+                    td= item.weaponKillsSuper
+                    td= item.weaponKillsMelee
+                    td= item.weaponBestType
+                    td= item.winLossRatio
+                    td= item.allParticipantsCount
+                    td= item.allParticipantsScore
+                    td= item.allParticipantsTimePlayed
+                    td= item.longestKillSpree
+                    td= item.longestSingleLife
+                    td= item.mostPrecisionKills
+                    td= item.orbsDropped
+                    td= item.orbsGathered
+                    td= item.remainingTimeAfterQuitSeconds
+                    td= item.teamScore
+                    td= item.totalActivityDurationSeconds
+                    td= item.combatRating
+                    td= item.fastestCompletionMs
+                    td= item.longestKillDistance
+                    td= item.highestCharacterLevel
+                    td= item.highestLightLevel
