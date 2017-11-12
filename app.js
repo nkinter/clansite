@@ -30,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/register', users);
 app.use('/pvpstats', pvpstats);
 app.use('/pvpstats/getdatatable', pvpstats);
 

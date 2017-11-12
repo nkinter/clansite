@@ -1,15 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var async = require('async');
 
 var con = mysql.createConnection({
-    host: "destiny2data.cycqbegtfmzx.us-east-1.rds.amazonaws.com",
-    user: "nkinter",
-    password: "fIre2167",
-    database: "raw"
+    // Reach out to Neill for instructions on setting environment variables
+    host: process.env.RDS_HOSTNAME,
+    user: process.env.RDS_USERNAME,
+    password: process.env.RDS_PASSWORD,
+    database: process.env.RDS_DB_NAME
 });
-
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

@@ -1,7 +1,6 @@
 branch-defaults:
   master:
-    environment: clan-site
-    group_suffix: null
+    environment: clan-website
 global:
   application_name: Clan
   branch: null
