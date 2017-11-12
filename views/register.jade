@@ -1,6 +1,20 @@
-form(action='/users/register', method='POST')
-    input(type='text', placeholder='email', name='email')
-    input(type='text', placeholder='bnet_id', name='bnet_id', value='16941161')
-    input(type='text', placeholder='password', name='password1')
-    input(type='text', placeholder='confirm password', name='password2')
-    button(type='submit') Submit
+extends layout
+
+block content
+
+    form(action='/users/register', method='POST')
+        div(class='form-group')
+            label(for='email') Email Address
+            input(type='text', class='form-control', placeholder='Enter Email', id='email', name='email')
+            small(id='emailHelp', class='form-text text-muted') We'll never share your email with anyone else.
+        div(class='form-group')
+            label(for='bnet_id') Bungie ID
+            input(type='text', class='form-control', placeholder='Bungie User ID', id='bnet_id', name='bnet_id')
+            small(id='bnetIDHelp', class='form-text text-muted') Found on bungie.net, below your Profile Name (ex. 16941161)
+        div(class='form-group')
+            label(for='password1') Password
+            input(type='password', class='form-control', placeholder='Password', id='password1', name='password1')
+        div(class='form-group')
+            label(for='password2') Re-enter Password
+            input(type='password', class='form-control', placeholder='Confirm Password', id='password2', name='password2')
+        button(type='submit', class='btn btn-primary') Submit
