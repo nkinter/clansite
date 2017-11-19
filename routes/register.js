@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
     res.render('register', { title: 'Register' });
 });
 
-router.post('/register', function(req, res, next) {
+router.post('/submit', function(req, res, next) {
 
     if (req.body.password1!=req.body.password2) {
         res.send("Passwords not the same. Try Again");

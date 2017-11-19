@@ -3,11 +3,15 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var stylus = require('stylus');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var register = require('./routes/register');
+var login = require('./routes/login');
+var protectedpage = require('./routes/protectedpage');
 var pvpstats = require('./routes/pvpstats');
 
 var app = express();
@@ -25,12 +29,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({secret: "123456789"}));
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/register', users);
+app.use('/register', register);
+app.use('/login', login);
+app.use('/protectedpage', protectedpage);
 app.use('/pvpstats', pvpstats);
 app.use('/pvpstats/getdatatable', pvpstats);
 

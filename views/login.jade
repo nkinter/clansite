@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    p= sampleText
+    p= message
+    form(action='/login/auth', method='POST')
+        div(class='form-group')
+            label(for='email') Email Address
+            input(type='text', class='form-control', placeholder='Enter Email', id='email', name='email')
+        div(class='form-group')
+            label(for='password') Password
+            input(type='password', class='form-control', placeholder='Password', id='password', name='password')
+        button(type='submit', class='btn btn-primary') Login
